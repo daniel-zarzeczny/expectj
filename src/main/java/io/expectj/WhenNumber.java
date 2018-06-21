@@ -2,6 +2,8 @@ package io.expectj;
 
 import io.expectj.predicate.number.*;
 
+import java.math.BigDecimal;
+
 public class WhenNumber extends When<Number> {
 
     WhenNumber(final Number subject) {
@@ -38,5 +40,21 @@ public class WhenNumber extends When<Number> {
 
     public WhenThrow<Number> isNotBetween(final Number minInclusive, final Number maxExclusive) {
         return new WhenThrow<>(subject, new BetweenPredicate(minInclusive, maxExclusive).negate());
+    }
+
+    public WhenThrow<Number> isPositive() {
+        return isGreaterThan(BigDecimal.ZERO);
+    }
+
+    public WhenThrow<Number> isNotPositive() {
+        return isLessThanOrEqualTo(BigDecimal.ZERO);
+    }
+
+    public WhenThrow<Number> isNegative() {
+        return isLessThan(BigDecimal.ZERO);
+    }
+
+    public WhenThrow<Number> isNotNegative() {
+        return isGreaterThanOrEqualTo(BigDecimal.ZERO);
     }
 }

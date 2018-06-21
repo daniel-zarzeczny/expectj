@@ -166,4 +166,44 @@ public class WhenNumberTest {
         when(subject).isLessThanOrEqualTo(0).thenThrow(IllegalArgumentException::new);
     }
 
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowException_WhenNumberIsPositive() {
+
+        // given
+        final Number subject = 50;
+
+        // when
+        when(subject).isPositive().thenThrow(IllegalArgumentException::new);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowException_WhenNumberIsNotPositive() {
+
+        // given
+        final Number subject = -50;
+
+        // when
+        when(subject).isNotPositive().thenThrow(IllegalArgumentException::new);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowException_WhenNumberIsNegative() {
+
+        // given
+        final Number subject = -50;
+
+        // when
+        when(subject).isNegative().thenThrow(IllegalArgumentException::new);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void shouldThrowException_WhenNumberIsNotNegative() {
+
+        // given
+        final Number subject = 50;
+
+        // when
+        when(subject).isNotNegative().thenThrow(IllegalArgumentException::new);
+    }
 }
