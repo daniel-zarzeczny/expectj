@@ -9,34 +9,34 @@ public class WhenNumber extends When<Number> {
     }
 
     public WhenThrow<Number> isEqualTo(final Number value) {
-        return new WhenThrow<>(subject, new NumberEqualToPredicate(value));
+        return new WhenThrow<>(subject, new EqualToPredicate(value));
     }
 
     public WhenThrow<Number> isNotEqualTo(final Number value) {
-        return new WhenThrow<>(subject, new NumberEqualToPredicate(value).negate());
+        return new WhenThrow<>(subject, new EqualToPredicate(value).negate());
     }
 
     public WhenThrow<Number> isGreaterThan(final Number value) {
-        return new WhenThrow<>(subject, new NumberGreaterThanPredicate(value));
+        return new WhenThrow<>(subject, new GreaterThanPredicate(value));
     }
 
     public WhenThrow<Number> isGreaterThanOrEqualTo(final Number value) {
-        return new WhenThrow<>(subject, new NumberGreaterThanOrEqualToPredicate(value));
+        return new WhenThrow<>(subject, new GreaterThanOrEqualToPredicate(value));
     }
 
-    public WhenThrow<Number> isLowerThan(final Number value) {
-        return new WhenThrow<>(subject, new NumberLowerThanPredicate(value));
+    public WhenThrow<Number> isLessThan(final Number value) {
+        return new WhenThrow<>(subject, new LessThanPredicate(value));
     }
 
-    public WhenThrow<Number> isLowerThanOrEqualTo(final Number value) {
-        return new WhenThrow<>(subject, new NumberLowerThanOrEqualToPredicate(value));
+    public WhenThrow<Number> isLessThanOrEqualTo(final Number value) {
+        return new WhenThrow<>(subject, new LessThanOrEqualToPredicate(value));
     }
 
     public WhenThrow<Number> isBetween(final Number minInclusive, final Number maxExclusive) {
-        return new WhenThrow<>(subject, new NumberBetweenPredicate(minInclusive, maxExclusive));
+        return new WhenThrow<>(subject, new BetweenPredicate(minInclusive, maxExclusive));
     }
 
     public WhenThrow<Number> isNotBetween(final Number minInclusive, final Number maxExclusive) {
-        return new WhenThrow<>(subject, new NumberBetweenPredicate(minInclusive, maxExclusive).negate());
+        return new WhenThrow<>(subject, new BetweenPredicate(minInclusive, maxExclusive).negate());
     }
 }

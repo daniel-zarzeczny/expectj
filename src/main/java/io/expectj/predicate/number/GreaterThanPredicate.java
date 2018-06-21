@@ -4,11 +4,11 @@ import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.function.Predicate;
 
-public class NumberGreaterThanPredicate implements Predicate<Number> {
+public class GreaterThanPredicate implements Predicate<Number> {
 
     private final BigDecimal subject;
 
-    public NumberGreaterThanPredicate(final Number subject) {
+    public GreaterThanPredicate(final Number subject) {
         this.subject = new BigDecimal(String.valueOf(subject));
     }
 

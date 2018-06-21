@@ -4,12 +4,12 @@ import java.math.BigDecimal;
 import java.util.Objects;
 import java.util.function.Predicate;
 
-public class NumberBetweenPredicate implements Predicate<Number> {
+public class BetweenPredicate implements Predicate<Number> {
 
     private final BigDecimal minInclusive;
     private final BigDecimal maxExclusive;
 
-    public NumberBetweenPredicate(final Number minInclusive, final Number maxExclusive) {
+    public BetweenPredicate(final Number minInclusive, final Number maxExclusive) {
         this.minInclusive = new BigDecimal(String.valueOf(minInclusive));
         this.maxExclusive = new BigDecimal(String.valueOf(maxExclusive));
     }

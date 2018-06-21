@@ -47,7 +47,7 @@ public class WhenNumberTest {
     }
 
     @Test
-    public void shouldPass_WhenNumberIsLowerThenMin() {
+    public void shouldPass_WhenNumberIsLessThenMin() {
 
         // given
         final Number subject = -1;
@@ -77,7 +77,7 @@ public class WhenNumberTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowException_WhenNumberIsLowerThanMin() {
+    public void shouldThrowException_WhenNumberIsLessThanMin() {
 
         // given
         final Number subject = -1;
@@ -137,33 +137,33 @@ public class WhenNumberTest {
     }
 
     @Test
-    public void shouldPass_WhenNumberIsNotLowerThan() {
+    public void shouldPass_WhenNumberIsNotLessThan() {
 
         // given
         final Number subject = 50;
 
         // when
-        when(subject).isLowerThan(0).thenThrow(IllegalArgumentException::new);
+        when(subject).isLessThan(0).thenThrow(IllegalArgumentException::new);
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void shouldThrowException_WhenNumberIsLowerThanOrEqualTo() {
+    public void shouldThrowException_WhenNumberIsLessThanOrEqualTo() {
 
         // given
         final Number subject = 50;
 
         // when
-        when(subject).isLowerThanOrEqualTo(50).thenThrow(IllegalArgumentException::new);
+        when(subject).isLessThanOrEqualTo(50).thenThrow(IllegalArgumentException::new);
     }
 
     @Test
-    public void shouldPass_WhenNumberIsNeitherLowerThanOrEqualTo() {
+    public void shouldPass_WhenNumberIsNeitherLessThanOrEqualTo() {
 
         // given
         final Number subject = 50;
 
         // when
-        when(subject).isLowerThanOrEqualTo(0).thenThrow(IllegalArgumentException::new);
+        when(subject).isLessThanOrEqualTo(0).thenThrow(IllegalArgumentException::new);
     }
 
 }
