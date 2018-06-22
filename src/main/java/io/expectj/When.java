@@ -1,6 +1,6 @@
 package io.expectj;
 
-import io.expectj.predicate.NullPredicate;
+import io.expectj.predicate.text.NullPredicate;
 
 import java.util.function.Predicate;
 import java.util.function.Supplier;

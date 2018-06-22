@@ -1,4 +1,4 @@
-package io.expectj.predicate;
+package io.expectj.predicate.text;
 
 import java.util.Objects;
 import java.util.function.Predicate;

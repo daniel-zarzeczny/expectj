@@ -1,4 +1,4 @@
-package io.expectj.predicate;
+package io.expectj.predicate.text;
 
 import org.apache.commons.lang3.StringUtils;
 
