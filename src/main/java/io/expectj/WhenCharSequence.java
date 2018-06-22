@@ -28,11 +28,11 @@ public class WhenCharSequence extends When<CharSequence> {
     }
 
     public WhenThrow<CharSequence> hasLength(final int length) {
-        return is(new LengthEqualsToPredicate(length));
+        return is(new LengthEqualToPredicate(length));
     }
 
     public WhenThrow<CharSequence> hasNotLength(final int length) {
-        return isNot(new LengthEqualsToPredicate(length));
+        return isNot(new LengthEqualToPredicate(length));
     }
 
     public WhenThrow<CharSequence> hasLengthBetween(final int minLengthInclusive, final int maxLengthExclusive) {

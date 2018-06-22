@@ -5,11 +5,11 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Optional;
 import java.util.function.Predicate;
 
-public class LengthEqualsToPredicate implements Predicate<CharSequence> {
+public class LengthEqualToPredicate implements Predicate<CharSequence> {
 
     private final int length;
 
-    public LengthEqualsToPredicate(final int length) {
+    public LengthEqualToPredicate(final int length) {
         this.length = length;
     }
 
